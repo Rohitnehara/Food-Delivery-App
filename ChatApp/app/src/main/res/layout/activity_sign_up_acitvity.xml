@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/silver"
+    tools:context=".SignUpAcitvity">
+
+    <LinearLayout
+        android:layout_width="378dp"
+        android:layout_height="721dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="98dp"
+            android:layout_height="108dp"
+            app:srcCompat="@drawable/_024" />
+
+        <EditText
+            android:id="@+id/usernameSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/EmailSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp" />
+
+        <EditText
+            android:id="@+id/PasswordSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Passwords"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/AlreadyAccount"
+            android:layout_width="207dp"
+            android:layout_height="21dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:text="Already have account" />
+
+        <Button
+            android:id="@+id/SignUP"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            app:cornerRadius="10dp" />
+
+        <LinearLayout
+            android:layout_width="366dp"
+            android:layout_height="74dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/googleSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:drawableLeft="@drawable/search__1_"
+                android:text="Google"
+                android:textColor="#040404"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/facebookLogin"
+                android:layout_width="177dp"
+                android:layout_height="63dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4569B1"
+                android:drawableLeft="@drawable/facebook"
+                android:text="Facebook"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Sign in using phone"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

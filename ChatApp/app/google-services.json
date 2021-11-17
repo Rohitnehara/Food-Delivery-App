@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978945614497",
+    "project_id": "fooddelviry",
+    "storage_bucket": "fooddelviry.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978945614497:android:5ed6baa9f833f5a72386e0",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978945614497-kpnousboiit9q9996l24ofkkpnis8vgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXTpA-UwggyjC-i6GMDtdR3q8yZfc8gYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978945614497-kpnousboiit9q9996l24ofkkpnis8vgf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
