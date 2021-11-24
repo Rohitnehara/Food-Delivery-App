@@ -26,8 +26,8 @@ ActivityLoginBinding binding;
         setContentView(binding.getRoot());
         auth =FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(LoginActivity.this);
-        progressDialog.setTitle("Loging In");
-        progressDialog.setMessage("we're creating youre account");
+        progressDialog.setTitle("Logging In");
+        progressDialog.setMessage("We are creating your account...");
 
         binding.Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,7 @@ ActivityLoginBinding binding;
         binding.ClikforSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in= new Intent(LoginActivity.this,SignUpAcitvity.class);
+                Intent in= new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(in);
             }
         });

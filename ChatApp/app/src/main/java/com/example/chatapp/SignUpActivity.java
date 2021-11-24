@@ -10,8 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.chatapp.databinding.ActivitySignUpAcitvityBinding;
@@ -30,7 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUpAcitvity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 //type Binding and you will get suggestion so  click on enter
     ActivitySignUpAcitvityBinding binding;
     private FirebaseAuth auth;
@@ -43,7 +41,7 @@ public class SignUpAcitvity extends AppCompatActivity {
         //add this  line
         binding = ActivitySignUpAcitvityBinding.inflate(getLayoutInflater());
         //this  is  the original line for code which you will need to change
-        //setContentView(R.layout.activity_sign_up_acitvity);
+        //setContentView(R.layout.activity_sign_up_activity);
         //make  these changes in this line and use it
         setContentView(binding.getRoot());
         //this line is for removing top bar
@@ -53,9 +51,9 @@ public class SignUpAcitvity extends AppCompatActivity {
         database=FirebaseDatabase.getInstance();
 
 
-        progressDialog = new ProgressDialog(SignUpAcitvity.this);
+        progressDialog = new ProgressDialog(SignUpActivity.this);
         progressDialog.setTitle("Creating account");
-        progressDialog.setMessage("we're creating youre account");
+        progressDialog.setMessage("We are creating your account...");
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions
@@ -102,8 +100,8 @@ public class SignUpAcitvity extends AppCompatActivity {
         binding.AlreadyAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent LogInent=new Intent(SignUpAcitvity.this,LoginActivity.class);
-                startActivity(LogInent);
+                Intent LogIntent=new Intent(SignUpActivity.this,LoginActivity.class);
+                startActivity(LogIntent);
             }
         });
 
@@ -120,7 +118,7 @@ public class SignUpAcitvity extends AppCompatActivity {
         ///this line keeps  user loged in
         if(auth.getCurrentUser()!=null)
         {
-            Intent intt=new Intent(SignUpAcitvity.this,MainActivity.class);
+            Intent intt=new Intent(SignUpActivity.this,MainActivity.class);
             startActivity(intt);
         }
     }
@@ -140,7 +138,7 @@ public class SignUpAcitvity extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                Intent intent = new Intent(SignUpAcitvity.this,MainActivity.class);
+                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {

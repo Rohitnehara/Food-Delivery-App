@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDE82D"
     android:orientation="vertical"
-    android:background="@color/silver"
     tools:context=".LoginActivity">
 
     <LinearLayout
-        android:layout_width="381dp"
-        android:layout_height="603dp"
+        android:layout_width="377dp"
+        android:layout_height="632dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="98dp"
-            android:layout_height="108dp"
-            app:srcCompat="@drawable/_024" />
+            android:id="@+id/imageView5"
+            android:layout_width="188dp"
+            android:layout_height="190dp"
+            app:srcCompat="@drawable/_23" />
 
         <EditText
             android:id="@+id/EmailLOGin"
@@ -34,9 +35,13 @@
             android:layout_marginBottom="20dp"
             android:background="@color/white"
             android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
             android:hint="Email"
+            android:hintTextColor="#757575"
             android:inputType="textPersonName"
-            android:paddingLeft="10dp" />
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="24" />
 
         <EditText
             android:id="@+id/PasswordLogin"
@@ -44,25 +49,43 @@
             android:layout_height="69dp"
             android:background="@color/white"
             android:ems="10"
+            android:fontFamily="@font/arbutus_slab"
             android:hint="Passwords"
             android:inputType="textPassword"
-            android:paddingLeft="10dp" />
+            android:paddingLeft="10dp"
+            android:textSize="24" />
 
         <TextView
             android:id="@+id/ClikforSignUp"
-            android:layout_width="206dp"
-            android:layout_height="25dp"
+            android:layout_width="242dp"
+            android:layout_height="26dp"
             android:layout_gravity="right"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/arbutus_slab"
             android:gravity="right"
-            android:text="Click for sign up" />
+            android:text="Click to Sign Up"
+            android:textSize="19" />
 
         <Button
             android:id="@+id/Login"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="LOG IN"
-            app:cornerRadius="10dp" />
+            android:background="@color/red"
+            android:text="LOGIN"
+            android:textSize="19"
+            app:cornerRadius="10dp"
+            app:iconTint="@color/red" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:fontFamily="@font/arbutus_slab"
+            android:gravity="center"
+            android:text="Log in using phone"
+            android:textAllCaps="false"
+            android:textSize="19"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="366dp"
@@ -94,13 +117,6 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="Log in using phone"
-            android:textSize="16sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

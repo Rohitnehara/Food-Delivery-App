@@ -11,7 +11,6 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.chatapp.databinding.ActivityMainBinding;
-import com.example.chatapp.databinding.ActivitySignUpAcitvityBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,7 +44,7 @@ FirebaseAuth auth;
                 break;
             case R.id.logOut:
                 auth.signOut();
-                Intent intent=new Intent(MainActivity.this,SignUpAcitvity.class);
+                Intent intent=new Intent(MainActivity.this, SignUpActivity.class);
                 startActivity(intent);
         }
         return true;
