@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdc2921-5836-4f8b-bd93-109542feb38f" name="Default Changelist" comment="" />
+    <list default="true" id="cbdc2921-5836-4f8b-bd93-109542feb38f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Food-Delivery-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Food-Delivery-App.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/androidTest/java/com/example/myapplication/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/java/com/example/myapplication/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/drawable-v24/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/drawable-v24/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/drawable/btn_gradient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/app/src/test/java/com/example/myapplication/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyApplication3/settings.gradle" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
