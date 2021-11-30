@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,8 @@ import com.example.project.Domain.CategoryDomain;
 import com.example.project.Domain.FoodDomain;
 import com.example.project.R;
 import com.example.project.module.Users;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -77,6 +80,10 @@ usernameboy=findViewById(R.id.textView4);
         database=FirebaseDatabase.getInstance();
         myRef=database.getReference();
 
+
+        String username=getIntent().getStringExtra("keyusername");
+        Uri profilePiiiic=getIntent().getParcelableExtra("keyname");
+
 support.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -103,13 +110,11 @@ support.setOnClickListener(new View.OnClickListener() {
 //    Users users = new Users();
 //    String fsdd = users.getUserId();
 //    users.getUsername();
-    usernameboy.setText("Hi " + auth.getCurrentUser().getDisplayName());
-        //usernameboy.setText("Hi " + myRef.g);
-
-
-        auth.getCurrentUser().getPhotoUrl();
+        GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
+        usernameboy.setText("Hi "+account.getDisplayName());
 //      profilePic.setImageURI(auth.getCurrentUser().getPhotoUrl());
-    Glide.with(this).load(auth.getCurrentUser().getPhotoUrl()).into(profilePic);
+            Glide.with(this).load(account.getPhotoUrl()).into(profilePic);
+
 ////        try {
 //            URL url = new URL("  auth.getCurrentUser().getPhotoUrl()");
 //            Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());

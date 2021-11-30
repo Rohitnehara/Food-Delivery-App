@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,6 +45,20 @@ public class IntroActivity extends AppCompatActivity {
    private EditText username,email,password;
    private Button signUp,googleSignUp;
    private TextView already;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+          FirebaseUser currentUser = auth.getCurrentUser();
+//        updateUI(currentUser);
+        if (auth.getCurrentUser() != null) {
+
+            Intent intt = new Intent(IntroActivity.this, MainActivity.class);
+            startActivity(intt);
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +142,7 @@ public class IntroActivity extends AppCompatActivity {
         already.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent LogInent = new Intent(IntroActivity.this,startingLoading.class);
+                Intent LogInent = new Intent(IntroActivity.this,splash_activity.class);
                 startActivity(LogInent);
             }
         });
@@ -137,17 +152,14 @@ public class IntroActivity extends AppCompatActivity {
         googleSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 signIn();
 
             }
         });
 
         ///this line keeps  user loged in
-        if (auth.getCurrentUser() != null) {
 
-            Intent intt = new Intent(IntroActivity.this, MainActivity.class);
-            startActivity(intt);
-        }
     }
 
     int RC_SIGN_IN = 69;
@@ -181,7 +193,10 @@ public class IntroActivity extends AppCompatActivity {
 
                 Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
-                Intent intent = new Intent(IntroActivity.this, MainActivity.class);
+
+//
+                Intent intent = new Intent(IntroActivity.this, startingLoading.class);
+//
                 startActivity(intent);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
@@ -200,6 +215,8 @@ public class IntroActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
+                            Intent intent = new Intent(IntroActivity.this,startingLoading.class);
+                          startActivity(intent);
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
