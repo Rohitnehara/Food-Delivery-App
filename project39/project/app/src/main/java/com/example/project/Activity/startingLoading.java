@@ -21,7 +21,7 @@ public class startingLoading extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent intent=new Intent(startingLoading.this,splash_activity.class);
+                    Intent intent=new Intent(startingLoading.this,MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
