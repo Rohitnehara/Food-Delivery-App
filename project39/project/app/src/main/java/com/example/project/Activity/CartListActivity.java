@@ -12,6 +12,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.project.Adapter.CartListAdapter;
+import com.example.project.Domain.FoodDomain;
 import com.example.project.Helper.ManagementCart;
 import com.example.project.Interface.ChangeNumberItemsListener;
 import com.example.project.R;
@@ -21,9 +22,10 @@ public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCart managementCart;
-    private TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt;
+    private TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt,checkout;
     private double tax;
     private ScrollView scrollView;
+    private FoodDomain domain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,16 @@ public class CartListActivity extends AppCompatActivity {
                 startActivity(new Intent(CartListActivity.this, CartListActivity.class));
             }
         });
+checkout.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+//        FcmNotificationsSender notificationsSender=new FcmNotificationsSender
+//           //     ("/topic/all","first",managementCart.getListCard(),getApplicationContext(),CartListActivity.this);
+//
+//        notificationsSender.SendNotifications();
 
+    }
+});
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +73,11 @@ public class CartListActivity extends AppCompatActivity {
             @Override
             public void changed() {
                 calculateCard();
+
+               // FcmNotificationsSender notificationsSender=new FcmNotificationsSender("")
+//                String title=domain.getTitle();
+//                int price=domain.getFee().intValue();
+//                int numer=domain.getNumberInCart();
             }
         });
 
@@ -97,5 +113,6 @@ public class CartListActivity extends AppCompatActivity {
         totalTxt = findViewById(R.id.totalTxt);
         emptyTxt = findViewById(R.id.emptyTxt);
         scrollView = findViewById(R.id.scrollView4);
+        checkout=findViewById(R.id.textView16);
     }
 }

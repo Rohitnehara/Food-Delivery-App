@@ -83,7 +83,7 @@ private TextView alreadt;
             public void onClick(View view) {
 //                progressDialog.show();
                 if(!TextUtils.isEmpty(passwpprd.getText().toString())&&!TextUtils.isEmpty(email.getText().toString())) {
-                    Toast.makeText(getApplicationContext(), "bro  kuch tho likh", Toast.LENGTH_SHORT).show();
+
 
                     auth.signInWithEmailAndPassword(email.getText().toString(),
                             passwpprd.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

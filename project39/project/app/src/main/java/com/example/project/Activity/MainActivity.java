@@ -110,11 +110,16 @@ support.setOnClickListener(new View.OnClickListener() {
 //    Users users = new Users();
 //    String fsdd = users.getUserId();
 //    users.getUsername();
+
+
+
+
         GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
-        usernameboy.setText("Hi "+account.getDisplayName());
+        if(GoogleSignIn.getLastSignedInAccount(this)!=null) {
+            usernameboy.setText("Hi " + account.getDisplayName());
 //      profilePic.setImageURI(auth.getCurrentUser().getPhotoUrl());
             Glide.with(this).load(account.getPhotoUrl()).into(profilePic);
-
+        }
 ////        try {
 //            URL url = new URL("  auth.getCurrentUser().getPhotoUrl()");
 //            Bitmap image = BitmapFactory.decodeStream(url.openConnection().getInputStream());
