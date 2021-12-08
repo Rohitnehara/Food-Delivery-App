@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="My Card"
+                android:text="My Cart"
                 android:textAlignment="center"
                 android:textColor="#ff3d00"
                 android:textSize="20sp"
@@ -308,7 +308,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/checkoutView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="16dp"
@@ -318,6 +318,7 @@
                 android:textColor="#ffffff"
                 android:textSize="25sp"
                 android:textStyle="bold" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -325,7 +326,7 @@
         android:id="@+id/emptyTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Card Is Empty"
+        android:text="Your Cart Is Empty"
         android:textSize="16sp"
         android:textStyle="bold"
         android:visibility="gone"

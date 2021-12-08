@@ -1,5 +1,6 @@
 package com.example.project.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,34 +11,71 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.project.Adapter.CartListAdapter;
 import com.example.project.Domain.FoodDomain;
+import com.example.project.Domain.userAddress;
 import com.example.project.Helper.ManagementCart;
 import com.example.project.Interface.ChangeNumberItemsListener;
 import com.example.project.R;
+import com.example.project.module.Users;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.Timestamp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCart managementCart;
-    private TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt,checkout;
+    private TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt,checkout,userInfo;
     private double tax;
     private ScrollView scrollView;
     private FoodDomain domain;
-
+   FirebaseFirestore dbroot;
+    userAddress u;
+    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list);
-
         managementCart = new ManagementCart(this);
-
+        FirebaseMessaging.getInstance().subscribeToTopic("all");
         initView();
         initList();
         calculateCard();
         bottomNavigation();
+        database=FirebaseDatabase.getInstance();
+        DatabaseReference myRef =database.getReference();
+        u=new userAddress();
+
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(CartListActivity.this,afterCheckout.class);
+                startActivity(intent);
+      //     insertData();
+            }
+        });
+
+    }
+
+
+    public  void  insertData()
+    {
+   dbroot.collection("orders").add(String.valueOf(managementCart.getListCard()));
     }
     private void bottomNavigation() {
         FloatingActionButton floatingActionButton = findViewById(R.id.card_btn);
@@ -49,16 +87,7 @@ public class CartListActivity extends AppCompatActivity {
                 startActivity(new Intent(CartListActivity.this, CartListActivity.class));
             }
         });
-checkout.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-//        FcmNotificationsSender notificationsSender=new FcmNotificationsSender
-//           //     ("/topic/all","first",managementCart.getListCard(),getApplicationContext(),CartListActivity.this);
-//
-//        notificationsSender.SendNotifications();
 
-    }
-});
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +142,6 @@ checkout.setOnClickListener(new View.OnClickListener() {
         totalTxt = findViewById(R.id.totalTxt);
         emptyTxt = findViewById(R.id.emptyTxt);
         scrollView = findViewById(R.id.scrollView4);
-        checkout=findViewById(R.id.textView16);
+        checkout=findViewById(R.id.checkoutView);
     }
 }

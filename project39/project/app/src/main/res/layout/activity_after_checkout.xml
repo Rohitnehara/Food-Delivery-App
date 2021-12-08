@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/asset_2"
+    tools:context=".Activity.afterCheckout">
+
+    <LinearLayout
+        android:layout_width="371dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="310dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/category_background3"
+            android:ems="10"
+            android:hint="phone no"
+            android:inputType="phone"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/Final_Address"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/category_background4"
+            android:ems="10"
+            android:hint="Full adress"
+            android:inputType="textPostalAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/Pincode"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/category_background1"
+            android:ems="10"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/Locality"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/category_background5"
+            android:hint="Locality"
+            android:padding="10dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/light_orange_back"
+            android:backgroundTint="#80DEEA"
+            android:text="Button" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,8 @@ import android.widget.Toast;
 
 import com.example.project.Domain.FoodDomain;
 import com.example.project.Interface.ChangeNumberItemsListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -16,7 +18,8 @@ public class ManagementCart {
         this.context = context;
         this.tinyDB = new TinyDB(context);
     }
-
+FirebaseDatabase database= FirebaseDatabase.getInstance();
+    DatabaseReference myRef=database.getReference().child("Orders").push();
     public void insertFood(FoodDomain item) {
         ArrayList<FoodDomain> listFood = getListCard();
         boolean existAlready = false;

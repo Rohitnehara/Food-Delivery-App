@@ -28,6 +28,7 @@ public class FoodDomain implements Serializable {
         this.numberInCart = numberInCart;
     }
 
+
     public String getTitle() {
         return title;
     }

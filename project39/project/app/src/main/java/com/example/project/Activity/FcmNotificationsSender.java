@@ -45,6 +45,9 @@ public class FcmNotificationsSender  {
     public FcmNotificationsSender(String userFcmToken, String first, ArrayList<FoodDomain> listCard) {
     }
 
+    public FcmNotificationsSender(String userFcmToken, String first, ArrayList<FoodDomain> listCard, Context applicationContext, CartListActivity mActivity) {
+    }
+
     public void SendNotifications() {
 
         requestQueue = Volley.newRequestQueue(mActivity);
@@ -54,7 +57,7 @@ public class FcmNotificationsSender  {
             JSONObject notiObject = new JSONObject();
             notiObject.put("title", title);
             notiObject.put("body", body);
-            notiObject.put("icon", "icon"); // enter icon that exists in drawable only
+            notiObject.put("icon", "asset_3"); // enter icon that exists in drawable only
 
 
 

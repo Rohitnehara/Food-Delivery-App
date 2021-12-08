@@ -76,6 +76,8 @@ DatabaseReference myRef;
 
 
 
+
+
         db.collection("pizza").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
@@ -120,11 +122,6 @@ DatabaseReference myRef;
                 Toast.makeText(getApplicationContext(), "Failed To Load Data", Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
-
-
     }
 
 }
